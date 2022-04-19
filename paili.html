@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=800">
+    <title>牌效训练</title>
+    <link rel="icon" type="image/png" href="https://kobalab.net/majiang/icon.png">
+    <link rel="apple-touch-icon" type="image/png" href="https://kobalab.net/majiang/icon.png">
+    <link rel="stylesheet" type="text/css" href="https://kobalab.net/majiang/css/majiang-1.6.8.css">
+    <script src="https://kobalab.net/majiang/js/majiang-1.6.8.js" defer></script>
+    <script src="https://kobalab.net/majiang/js/paili-1.6.8.js" defer></script>
+  </head>
+  <body class="demo">
+    <div id="loaderr" style="display: none"></div>
+    <script>
+      window.onload = function(){
+        if (typeof Majiang === 'undefined') {
+          var text = document.createTextNode(
+                          'プログラムのロードでエラーが発生しました。'
+                        + 'お使いのブラウザでは実行できない可能性があります。'
+                        + 'リロードして問題が解決しない場合は、'
+                        + 'Google Chromeなど最新のブラウザでアクセスしてみてください。');
+          var elem = document.getElementById('loaderr');
+          elem.appendChild(text);
+          elem.removeAttribute('style');
+        }    
+      }
+    </script>
+    <div id="loaddata">
+      <img class="pai" data-pai="m1" src="https://kobalab.net/majiang/img/m1.gif">
+      <img class="pai" data-pai="m2" src="https://kobalab.net/majiang/img/m2.gif">
+      <img class="pai" data-pai="m3" src="https://kobalab.net/majiang/img/m3.gif">
+      <img class="pai" data-pai="m4" src="https://kobalab.net/majiang/img/m4.gif">
+      <img class="pai" data-pai="m5" src="https://kobalab.net/majiang/img/m5.gif">
+      <img class="pai" data-pai="m6" src="https://kobalab.net/majiang/img/m6.gif">
+      <img class="pai" data-pai="m7" src="https://kobalab.net/majiang/img/m7.gif">
+      <img class="pai" data-pai="m8" src="https://kobalab.net/majiang/img/m8.gif">
+      <img class="pai" data-pai="m9" src="https://kobalab.net/majiang/img/m9.gif">
+      <img class="pai" data-pai="m0" src="https://kobalab.net/majiang/img/m0.gif">
+      <br>
+      <img class="pai" data-pai="p1" src="https://kobalab.net/majiang/img/p1.gif">
+      <img class="pai" data-pai="p2" src="https://kobalab.net/majiang/img/p2.gif">
+      <img class="pai" data-pai="p3" src="https://kobalab.net/majiang/img/p3.gif">
+      <img class="pai" data-pai="p4" src="https://kobalab.net/majiang/img/p4.gif">
+      <img class="pai" data-pai="p5" src="https://kobalab.net/majiang/img/p5.gif">
+      <img class="pai" data-pai="p6" src="https://kobalab.net/majiang/img/p6.gif">
+      <img class="pai" data-pai="p7" src="https://kobalab.net/majiang/img/p7.gif">
+      <img class="pai" data-pai="p8" src="https://kobalab.net/majiang/img/p8.gif">
+      <img class="pai" data-pai="p9" src="https://kobalab.net/majiang/img/p9.gif">
+      <img class="pai" data-pai="p0" src="https://kobalab.net/majiang/img/p0.gif">
+      <br>
+      <img class="pai" data-pai="s1" src="https://kobalab.net/majiang/img/s1.gif">
+      <img class="pai" data-pai="s2" src="https://kobalab.net/majiang/img/s2.gif">
+      <img class="pai" data-pai="s3" src="https://kobalab.net/majiang/img/s3.gif">
+      <img class="pai" data-pai="s4" src="https://kobalab.net/majiang/img/s4.gif">
+      <img class="pai" data-pai="s5" src="https://kobalab.net/majiang/img/s5.gif">
+      <img class="pai" data-pai="s6" src="https://kobalab.net/majiang/img/s6.gif">
+      <img class="pai" data-pai="s7" src="https://kobalab.net/majiang/img/s7.gif">
+      <img class="pai" data-pai="s8" src="https://kobalab.net/majiang/img/s8.gif">
+      <img class="pai" data-pai="s9" src="https://kobalab.net/majiang/img/s9.gif">
+      <img class="pai" data-pai="s0" src="https://kobalab.net/majiang/img/s0.gif">
+      <br>
+      <img class="pai" data-pai="z1" src="https://kobalab.net/majiang/img/z1.gif">
+      <img class="pai" data-pai="z2" src="https://kobalab.net/majiang/img/z2.gif">
+      <img class="pai" data-pai="z3" src="https://kobalab.net/majiang/img/z3.gif">
+      <img class="pai" data-pai="z4" src="https://kobalab.net/majiang/img/z4.gif">
+      <img class="pai" data-pai="z5" src="https://kobalab.net/majiang/img/z5.gif">
+      <img class="pai" data-pai="z6" src="https://kobalab.net/majiang/img/z6.gif">
+      <img class="pai" data-pai="z7" src="https://kobalab.net/majiang/img/z7.gif">
+      <img class="pai" data-pai="_" src="https://kobalab.net/majiang/img/pai.gif">
+      <br>
+      <audio data-name="dapai" src="https://kobalab.net/majiang/audio/dahai11.wav" volume="0.2" preload></audio>
+      <audio data-name="chi" src="https://kobalab.net/majiang/audio/chii.wav" volume="0.2" preload></audio>
+      <audio data-name="peng" src="https://kobalab.net/majiang/audio/pon.wav" volume="0.2" preload></audio>
+      <audio data-name="gang" src="https://kobalab.net/majiang/audio/kan.wav" volume="0.2" preload></audio>
+      <audio data-name="rong" src="https://kobalab.net/majiang/audio/ron.wav" volume="0.2" preload></audio>
+      <audio data-name="zimo" src="https://kobalab.net/majiang/audio/tsumo.wav" volume="0.2" preload></audio>
+      <audio data-name="lizhi" src="https://kobalab.net/majiang/audio/richi.wav" volume="0.2" preload></audio>
+      <audio data-name="gong" src="https://kobalab.net/majiang/audio/nc43994.wav" volume="1" preload></audio>
+    </div>
+    <div class="version"></div>
+    <form>
+      <input type="button" value="随机生成">| 手牌
+      <input type="text" name="paistr" value=""> 
+      <input type="submit" value="确定"> 
+      <input type="reset" value="清除">
+    </form>
+    <hr>
+    <div class="he">
+      <div class="lizhi"><img class="choma hide" src="https://kobalab.net/majiang/img/1000.gif"></div>
+      <div class="dapai"></div>
+    </div>
+    <div class="shoupai">
+      <div class="bingpai"></div>
+      <div class="fulou"></div>
+    </div>
+    
+	<details>
+	    <summary>解析</summary>
+		<div>
+			<p class="status"></p>
+		</div>
+	    <div class="paili"></div>
+	</details>
+  </body>
+</html>

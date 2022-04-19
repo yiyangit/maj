@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<script>
+			function sot(x){
+				x=Array.from(x);
+				for(let i=0;i<x.length;i++){
+					for(let j=i+1;j<x.length;j++){
+						if(x[i]>x[j]){
+							let tmp=x[j];
+							x[j]=x[i];
+							x[i]=tmp;
+						}
+					}
+				}
+				return x.join('');
+			}
+			var gen = function(){
+				var mt = [];
+				for(let i=1;i<=4;i++){
+					for(let j=1;j<=9;j++){
+						mt.push("p"+j);
+						mt.push("s"+j);
+						mt.push("m"+j);
+					}
+				}
+				for(let i=1;i<=4;i++){
+					for(let j=1;j<=7;j++){
+						mt.push("z"+j);
+					}
+				}
+				for(let i=1;i<=2000;i++){
+					let a=Math.floor(Math.random() * 136);
+					let b=Math.floor(Math.random() * 136);
+					let tmp=mt[b];
+					mt[b]=mt[a];
+					mt[a]=tmp;
+				}
+				let p="";
+				let s="";
+				let m="";
+				let z="";
+				for(let i=1;i<=13;i++){
+					if(mt[i][0]=='p')p+=mt[i][1];
+					if(mt[i][0]=='s')s+=mt[i][1];
+					if(mt[i][0]=='m')m+=mt[i][1];
+					if(mt[i][0]=='z')z+=mt[i][1];
+				}
+				p=sot(p);
+				s=sot(s);
+				m=sot(m);
+				z=sot(z);
+				if(p)p+='p';
+				if(s)s+='s';
+				if(m)m+='m';
+				if(z)z+='z';
+				return (p+s+m+z);
+			}
+		</script>
+	</head>
+	<body>
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="" id="h1">
+		<img src="" alt="">
+		
+		<img src="" alt="">
+	</body>
+</html>
